@@ -5,7 +5,7 @@
  */
 
 import { Request, Response, NextFunction } from "express";
-import schema from "./schema";
+import schema from "./auth.schema";
 
 /**
  *
