@@ -13,7 +13,7 @@ export const connectDB = () => {
 };
 export const connectTestDB = () => {
   try {
-    MongoMemoryServer.create().then((mongo) => {
+    MongoMemoryServer.create().then((mongo: { getUri: () => any; }) => {
       const uri: any = mongo.getUri();
       mongoose.connect(uri).then(() => {
         console.log("connected to testDB");
